@@ -1,0 +1,159 @@
+﻿html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.industry4_1 {
+    height: 600px;
+    background-image: url('../images/industry41.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.intro {
+    background-color: lightgray;
+    height: 200px;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 50px;
+    color: black;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+p {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+a {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.industry2 {
+    height: 600px;
+    background-image: url('../images/industry4_0.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+figure {
+    height: auto;
+    width: auto;
+    position: relative;
+    
+}
+
+figcaption {
+    margin: 10px;
+    background-color: lightgray;
+    opacity: 0.7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    padding-top: 10%;
+    visibility: hidden;
+    color: black;
+   
+}
+.figP {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    
+    padding: 5%;
+    padding-bottom: 0px;
+}
+
+figure:hover > figcaption {
+    visibility: visible;
+}
+
+
+.industry1 {
+    height: 600px;
+    background-image: url(../images/Industry41.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.industry1 h1 {
+    color: black;
+    text-align: center;
+    padding-top: 10%;
+}
+.industry1 h3 {
+    color: black;
+    text-align: center;
+}
+
+
+.tec {
+    height: 600px;
+    background-image: url('../images/tec.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.CO {
+    height: 600px;
+    background-image: url('../images/CO.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.introTec {
+    background-image: url('../images/tec.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+    
+    font-size: 60px;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    padding-left: 0px;
+    margin: 0px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.CA {
+    text-align: center;
+    padding: 10%;
+    background-image: url('../images/contactus.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+}
+.notp {
+    color: black;
+    background-color: white;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-shadow:none;
+    font-size: 20px;
+}
+.footerCol {
+    flex: 33%;
+}

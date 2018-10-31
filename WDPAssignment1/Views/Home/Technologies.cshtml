@@ -1,0 +1,421 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Technologies";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="introTec">
+    <h1>Emerging Technologies</h1>
+    <h2>Where the Future is Now</h2>
+</div>
+
+
+
+<h1 id="Artficial intelligence">Artficial intelligence.</h1>
+
+<div id="ai"></div>
+
+<!-- Elastic grid -->
+<script type="text/javascript">
+    $(function () {
+        $("#ai").elastic_grid({
+            'showAllText': 'All',
+            'filterEffect': 'popup',
+            'hoverDirection': true,
+            'hoverDelay': 0,
+            'hoverInverse': false,
+            'expandingSpeed': 500,
+            'expandingHeight': 200,
+            'items':
+                [
+                    {
+                        'title': 'IBM <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>International Business Machines Corporation is an American multinational technology company headquartered in Armonk, New York, United States, with operations in over 170 countries. The company began in 1911 as the Computing-Tabulating-Recording Company and was renamed "International Business Machines" in 1924.</h4>',
+                        'thumbnail': ['/images/ibm21.jpg'],
+                        'large': ['/images/IBM2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.ibm.com/watson/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+
+                    {
+                        'title': 'Microsoft <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Microsoft Corporation is an American multinational corporation headquartered in Redmond, Washington, that develops, manufactures, licenses, supports and sells computer software, consumer electronics and personal computers and services. Its best known software products are the Microsoft Windows line of operating systems, Microsoft Office office suite, and Internet Explorer web browser. Its flagship hardware products are Xbox game console and the Microsoft Surface series of tablets.  </h4>',
+                        'thumbnail': ['/images/microsoft21.jpg'],
+                        'large': ['/images/microsoft2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.microsoft.com/en-us/ai/default.aspx', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'CSIRO <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>The Commonwealth Scientific and Industrial Research Organisation is an independent Australian federal government agency responsible for scientific research. Its chief role is to improve the economic and social performance of industry for the benefit of the community</h4>',
+                        'thumbnail': ['/images/csiro21.jpg'],
+                        'large': ['/images/csiro2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://data61.csiro.au/en/Our-Work/AI-and-Machine-Learning', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'Amazon2 <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Amazon.com, Inc., doing business as Amazon, is an American electronic commerce and cloud computing company based in Seattle, Washington, that was founded by Jeff Bezos on July 5, 1994. The tech giant is the largest Internet retailer in the world as measured by revenue and market capitalization, and second largest after Alibaba Group in terms of total sales.</h4>',
+                        'thumbnail': ['/images/amazon21.jpg'],
+                        'large': ['/images/amazon2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://aws.amazon.com/machine-learning/ai-lex-polly-rekognition/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                ]
+        });
+    });
+</script>
+
+<h1 id="Internet of Things (IoT)">Internet of Things (IoT)</h1>
+
+<div id="iot"></div>
+
+<!-- Elastic grid -->
+<script type="text/javascript">
+    $(function () {
+        $("#iot").elastic_grid({
+            'showAllText': 'All',
+            'filterEffect': 'popup',
+            'hoverDirection': true,
+            'hoverDelay': 0,
+            'hoverInverse': false,
+            'expandingSpeed': 500,
+            'expandingHeight': 364,
+            'items':
+                [
+                    {
+                        'title': 'IBM <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>International Business Machines Corporation is an American multinational technology company headquartered in Armonk, New York, United States, with operations in over 170 countries. The company began in 1911 as the Computing-Tabulating-Recording Company and was renamed "International Business Machines" in 1924.</h4>',
+                        'thumbnail': ['/images/ibm21.jpg'],
+                        'large': ['/images/IBM2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.ibm.com/blogs/internet-of-things/industry-4-0/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+
+                    {
+                        'title': 'Microsoft <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Microsoft Corporation is an American multinational corporation headquartered in Redmond, Washington, that develops, manufactures, licenses, supports and sells computer software, consumer electronics and personal computers and services. Its best known software products are the Microsoft Windows line of operating systems, Microsoft Office office suite, and Internet Explorer web browser. Its flagship hardware products are Xbox game console and the Microsoft Surface series of tablets. </h4>',
+                        'thumbnail': ['/images/microsoft21.jpg'],
+                        'large': ['/images/microsoft2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.microsoft.com/en-au/internet-of-things/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'Amazon <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Amazon.com, Inc., doing business as Amazon, is an American electronic commerce and cloud computing company based in Seattle, Washington, that was founded by Jeff Bezos on July 5, 1994. The tech giant is the largest Internet retailer in the world as measured by revenue and market capitalization, and second largest after Alibaba Group in terms of total sales.</h4>',
+                        'thumbnail': ['/images/amazon21.jpg'],
+                        'large': ['/images/amazon2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://aws.amazon.com/iot/?sc_channel=PS&sc_campaign=acquisition_AU&sc_publisher=google&sc_medium=iot_nb&sc_content=iot_e&sc_detail=iot&sc_category=iot&sc_segment=154387165862&sc_matchtype=e&sc_country=AU&s_kwcid=AL!4422!3!154387165862!e!!g!!iot&ef_id=WmksLwAAAHVHXlHa:20180805102347:s', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'CIO <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>The Credit and Investments Ombudsman is an Australian alternative dispute resolution or ombudsman that helps settle disputes between consumers and financial credit providers. It was established in 2003 as a result of the Mortgage & Finance Association of Australia self-regulation, originally called the Mortgage Industry Ombudsman Scheme. It later expanded its remit to include non-bank lending and other credit services, changing its name to the Credit Ombudsman Service Limited to reflect this broader jurisdiction. </h4>',
+                        'thumbnail': ['/images/cio21.jpg'],
+                        'large': ['/images/CIO.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.cio.com.au/article/641518/feds-launch-ai-iot-projects/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                ]
+        });
+    });
+</script>
+
+<h1 id="cognitive services">cognitive services</h1>
+
+<div id="CS"></div>
+
+<!-- Elastic grid -->
+<script type="text/javascript">
+    $(function () {
+        $("#CS").elastic_grid({
+            'showAllText': 'All',
+            'filterEffect': 'popup',
+            'hoverDirection': true,
+            'hoverDelay': 0,
+            'hoverInverse': false,
+            'expandingSpeed': 500,
+            'expandingHeight': 364,
+            'items':
+                [
+                    {
+                        'title': 'IBM <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>International Business Machines Corporation is an American multinational technology company headquartered in Armonk, New York, United States, with operations in over 170 countries. The company began in 1911 as the Computing-Tabulating-Recording Company and was renamed "International Business Machines" in 1924.</h4>',
+                        'thumbnail': ['/images/ibm21.jpg'],
+                        'large': ['/images/IBM2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.ibm.com/services/artificial-intelligence', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+
+                    {
+                        'title': 'Microsoft <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Microsoft Corporation is an American multinational corporation headquartered in Redmond, Washington, that develops, manufactures, licenses, supports and sells computer software, consumer electronics and personal computers and services. Its best known software products are the Microsoft Windows line of operating systems, Microsoft Office office suite, and Internet Explorer web browser. Its flagship hardware products are Xbox game console and the Microsoft Surface series of tablets.</h4>',
+                        'thumbnail': ['/images/microsoft21.jpg'],
+                        'large': ['/images/microsoft2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://azure.microsoft.com/en-au/services/cognitive-services/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'Google <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. Google was founded in 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock.</h4>',
+                        'thumbnail': ['/images/google21.jpg'],
+                        'large': ['/images/google2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://cloud.google.com/vision/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'Forbes <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Forbes is an American family-controlled business magazine. Published bi-weekly, it features original articles on finance, industry, investing, and marketing topics. Forbes also reports on related subjects such as technology, communications, science, politics, and law. Its headquarters is located in Jersey City, New Jersey. Primary competitors in the national business magazine category include Fortune and Bloomberg Businessweek</h4>',
+                        'thumbnail': ['/images/forbes21.jpg'],
+                        'large': ['/images/forbes2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.forbes.com/sites/bernardmarr/2016/03/23/what-everyone-should-know-about-cognitive-computing/#62c3c5885088', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                ]
+        });
+    });
+</script>
+
+<h1 id="Cloud Computing">Cloud Computing</h1>
+
+<div id="cloud"></div>
+
+<!-- Elastic grid -->
+<script type="text/javascript">
+    $(function () {
+        $("#cloud").elastic_grid({
+            'showAllText': 'All',
+            'filterEffect': 'popup',
+            'hoverDirection': true,
+            'hoverDelay': 0,
+            'hoverInverse': false,
+            'expandingSpeed': 500,
+            'expandingHeight': 364,
+            'items':
+                [
+                    {
+                        'title': 'Google <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. Google was founded in 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock.</h4>',
+                        'thumbnail': ['/images/google21.jpg'],
+                        'large': ['/images/google2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://cloud.google.com/solutions/iot/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+
+                    {
+                        'title': 'Microsoft <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Microsoft Corporation is an American multinational corporation headquartered in Redmond, Washington, that develops, manufactures, licenses, supports and sells computer software, consumer electronics and personal computers and services. Its best known software products are the Microsoft Windows line of operating systems, Microsoft Office office suite, and Internet Explorer web browser. Its flagship hardware products are Xbox game console and the Microsoft Surface series of tablets.</h4>',
+                        'thumbnail': ['/images/microsoft21.jpg'],
+                        'large': ['/images/microsoft2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://azure.microsoft.com/en-au/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'IBM <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>International Business Machines Corporation is an American multinational technology company headquartered in Armonk, New York, United States, with operations in over 170 countries. The company began in 1911 as the Computing-Tabulating-Recording Company and was renamed "International Business Machines" in 1924.</h4>',
+                        'thumbnail': ['/images/ibm21.jpg'],
+                        'large': ['/images/IBM2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.ibm.com/cloud/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'Amazon <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Amazon.com, Inc., doing business as Amazon, is an American electronic commerce and cloud computing company based in Seattle, Washington, that was founded by Jeff Bezos on July 5, 1994. The tech giant is the largest Internet retailer in the world as measured by revenue and market capitalization, and second largest after Alibaba Group in terms of total sales.</h4>',
+                        'thumbnail': ['/images/amazon21.jpg'],
+                        'large': ['/images/amazon2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://aws.amazon.com/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                ]
+        });
+    });
+</script>
+
+<h1 id="Robotics">Robotics</h1>
+<div id="robotics"></div>
+
+<!-- Elastic grid -->
+<script type="text/javascript">
+    $(function () {
+        $("#robotics").elastic_grid({
+            'showAllText': 'All',
+            'filterEffect': 'popup',
+            'hoverDirection': true,
+            'hoverDelay': 0,
+            'hoverInverse': false,
+            'expandingSpeed': 500,
+            'expandingHeight': 364,
+            'items':
+                [
+                    {
+                        'title': 'Forbes <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Forbes is an American family-controlled business magazine. Published bi-weekly, it features original articles on finance, industry, investing, and marketing topics. Forbes also reports on related subjects such as technology, communications, science, politics, and law. Its headquarters is located in Jersey City, New Jersey. Primary competitors in the national business magazine category include Fortune and Bloomberg Businessweek</h4>',
+                        'thumbnail': ['/images/forbes21.jpg'],
+                        'large': ['/images/forbes2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.forbes.com/sites/jimlawton/2018/03/20/the-role-of-robots-in-industry-4-0/#69de1dca706b', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+
+                    {
+                        'title': 'ZDnet <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>ZDNet is a business technology news website published by CBS Interactive, along with TechRepublic. The brand was founded on April 1, 1991, as a general interest technology portal from Ziff Davis and evolved into an enterprise IT-focused online publication owned by CNET Networks</h4>',
+                        'thumbnail': ['/images/zdnet21.jpg'],
+                        'large': ['/images/zdnet.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.zdnet.com/article/robotics-and-industry-4-0/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': ' I-Scoop robots cobots <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>The logistics robots and technologies of Kiva Systems were in high demand and several companies, predominantly retailers and e-fulfillment service providers (e-commerce is a key market driver), worked with the company. Until sometime after the acquisition when Amazon announced that it would use Kiva Systems, now known as Amazon Robotics, for its own operations alone. Support for existing customers, of which quite a few already stopped using Kiva Systems and others are about to, has been going on several years after the acquisition and is expected to stop in a few years.</h4>',
+                        'thumbnail': ['/images/iscoop21.jpg'],
+                        'large': ['/images/iscoop.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.i-scoop.eu/robots-cobots-logistics-4-0/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'Automation World <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>The smart industrial facility is upon us. We’re already accustomed to having information about nearly anything at our fingertips. Industry 4.0 looks to extend that immediacy and extract vital information from your sensors, equipment and plant floor.</h4>',
+                        'thumbnail': ['/images/AWorld21.jpg'],
+                        'large': ['/images/AWorld.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.automationworld.com/industry-40-here-are-you-ready', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                ]
+        });
+    });
+</script>
+
+<h1 id="Blockchain">Blockchain</h1>
+
+<div id="blockchain"></div>
+
+<!-- Elastic grid -->
+<script type="text/javascript">
+    $(function () {
+        $("#blockchain").elastic_grid({
+            'showAllText': 'All',
+            'filterEffect': 'popup',
+            'hoverDirection': true,
+            'hoverDelay': 0,
+            'hoverInverse': false,
+            'expandingSpeed': 500,
+            'expandingHeight': 364,
+            'items':
+                [
+                    {
+                        'title': 'Blockchain <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>A blockchain, originally block chain, is a growing list of records, called blocks, which are linked using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data.</h4>',
+                        'thumbnail': ['/images/blockchain21.jpg'],
+                        'large': ['/images/blockchain2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.blockchain.com/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+
+                    {
+                        'title': 'PC Magazine <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>PC Magazine is an American computer magazine published by Ziff Davis. A print edition was published from 1982 to January 2009. Publication of online editions started in late 1994 and continues to this day.</h4>',
+                        'thumbnail': ['/images/pc21.jpg'],
+                        'large': ['/images/pc.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://au.pcmag.com/amazon-web-services/46389/feature/blockchain-the-invisible-technology-thats-changing-the-world', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'Forbes <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>Forbes is an American family-controlled business magazine. Published bi-weekly, it features original articles on finance, industry, investing, and marketing topics. Forbes also reports on related subjects such as technology, communications, science, politics, and law. Its headquarters is located in Jersey City, New Jersey. Primary competitors in the national business magazine category include Fortune and Bloomberg Businessweek</h4>',
+                        'thumbnail': ['/images/forbes21.jpg'],
+                        'large': ['/images/forbes2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.forbes.com/sites/andrewrossow/2018/04/11/bringing-blockchain-into-industry-4-0/', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                    {
+                        'title': 'CSIRO <hr/> <a class="btn btn-primary">More Details</a>',
+                        'description': '<h4>The Commonwealth Scientific and Industrial Research Organisation is an independent Australian federal government agency responsible for scientific research. Its chief role is to improve the economic and social performance of industry for the benefit of the community</h4>',
+                        'thumbnail': ['/images/csiro21.jpg'],
+                        'large': ['/images/csiro2.jpg'],
+                        'button_list':
+                            [
+                                { 'title': 'Visit Website', 'url': 'https://www.data61.csiro.au/en/our-work/safety-and-security/secure-systems-and-platforms/blockchain', 'new_window': true },
+                            ],
+                        'tags': ['']
+                    },
+                ]
+        });
+    });
+</script>
+
+
+<div><h1>Feedback</h1></div>
+

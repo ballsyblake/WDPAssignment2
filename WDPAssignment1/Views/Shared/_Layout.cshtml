@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - The Future</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+        <link rel="stylesheet" href="~/css/indexStyle.css" type="text/css" />
+        <link rel="stylesheet" href="~/css/elastic-grid.min.css" type="text/css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Industry 4.0</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Organisations">Companies & Organisations</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Technologies">Emerging Technologies</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Map">World Map</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Contact & About</a></li>
+                    <li><a asp-area="" asp-controller="FeedbackForms" asp-action="Index">Feedback</a></li>
+                </ul>
+                @await Html.PartialAsync("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer style="background-color:darkcyan;">
+            <div class="row" style="padding: 5px;">
+                <div class="col-lg-6 col-md-6 col-sm-6"><h2>Page Links</h2></div>
+                <div class="col-lg-6 col-md-6 col-sm-6"><h2 style="text-align:right; padding-right:5%;">Social Media Links</h2></div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+
+                    <ul style="list-style-type:none;">
+                        <li><a href="/Home" style="text-shadow:none; color:black">Home</a></li>
+                        <li><a href="/Home/Organisations" style="text-shadow:none; color:black">Organisations and Companies</a></li>
+                        <li><a href="/Home/Technologies" style="text-shadow:none; color:black">Emerging Technologies</a></li>
+                    </ul>
+
+
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <ul style="list-style-type:none;">
+                        <li><a href="/Home/Map" style="text-shadow:none; color:black">World Map</a></li>
+                        <li><a href="/Home/About" style="text-shadow:none; color:black">Contact and About</a></li>
+                    </ul>
+
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4" style="text-align: right; padding-right:3%;">
+                    
+                    <a href="https://www.facebook.com" style="padding:5px;"><img src="~/images/facebook.png" width="50" height="50"></a>
+                    <a href="https://www.twitter.com"style="padding:5px;"><img src="~/images/twitter.png" width="50" height="50"></a>
+                    <a href="https://www.instagram.com"style="padding:5px;"><img src="~/images/instagram.png" width="50" height="50"></a>
+                    <a href="https://plus.google.com/"style="padding:5px;"><img src="~/images/googleplus.png" width="50" height="50"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/modernizr.custom.js"></script>
+        <script src="~/js/classie.js"></script>
+        <script src="~/js/elastic_grid.min.js"></script>
+
+
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
