@@ -14,6 +14,8 @@ namespace WDPAssignment1.Models
         public string Technology { get; set; }
         public string Rating { get; set; }
         public string Feedback { get; set; }
+        public int Agree { get; set; }
+        public int Disagree { get; set; }
 
     }
 }

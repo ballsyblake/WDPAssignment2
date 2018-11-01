@@ -12,18 +12,37 @@
 @foreach (var item in Model)
 {
     <h3>@Html.DisplayFor(modelItem => item.Heading)</h3>
-    <h4>@Html.DisplayFor(modelItem => item.Technology)</h4>
+    <h4>@@ @Html.DisplayFor(modelItem => item.Technology)</h4>
     <ul style="list-style-type:none">
-        <li>@Html.DisplayFor(modelItem => item.Rating)</li>
+        <li>
+            @{
+                for (int i = 0; i < int.Parse(item.Rating); i++)
+                {
+                    <span style ="color:gold;">&#x2605;</span> 
+                }
+                for (int i = 0; i < 5 - int.Parse(item.Rating); i++)
+                {
+                    <span>&#x2606;</span> 
+                }
+                }
+        </li>
         <li>@Html.DisplayFor(modelItem => item.Feedback)</li>
         <li>Feedback by @Html.DisplayFor(modelItem => item.UserName) at @Html.DisplayFor(modelItem => item.Date)</li>
         <li>
-            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            @{
+                if (User.IsInRole("User")||User.IsInRole("Manager"))
+                {
+                    <a asp-action="IncreaseAgree" asp-route-id="@item.Id">Like(@item.Agree.ToString())</a>
+                    <a asp-action="IncreaseDisagree" asp-route-id="@item.Id">Dislike(@item.Disagree.ToString())</a>
+                }
+            }
             @{
                 if (User.IsInRole("Manager"))
                 {
+                    
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a> | </a>
+                    
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 }
 
@@ -32,58 +51,3 @@
         </li>
     </ul>
 }
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Heading)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Technology)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Rating)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Feedback)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Heading)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Technology)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Rating)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Feedback)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>

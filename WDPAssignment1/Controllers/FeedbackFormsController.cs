@@ -59,7 +59,7 @@ namespace WDPAssignment1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Date,UserName,Heading,Technology,Rating,Feedback")] FeedbackForm feedbackForm)
+        public async Task<IActionResult> Create([Bind("Id,Date,UserName,Heading,Technology,Rating,Feedback,Agree,Disagree")] FeedbackForm feedbackForm)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace WDPAssignment1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,UserName,Heading,Technology,Rating,Feedback")] FeedbackForm feedbackForm)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,UserName,Heading,Technology,Rating,Feedback,Agree,Disagree")] FeedbackForm feedbackForm)
         {
             if (id != feedbackForm.Id)
             {
@@ -155,6 +155,84 @@ namespace WDPAssignment1.Controllers
         private bool FeedbackFormExists(int id)
         {
             return _context.FeedbackForm.Any(e => e.Id == id);
+        }
+
+        [Authorize(Roles = "Manager, User")]
+        public async Task<IActionResult> IncreaseAgree(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var feedbackForm = await _context.FeedbackForm.SingleOrDefaultAsync(m => m.Id == id);
+            if (feedbackForm == null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    int total = feedbackForm.Agree + 1;
+                    feedbackForm.Agree = total;
+
+                   
+
+                    _context.Update(feedbackForm);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!FeedbackFormExists(feedbackForm.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
+        [Authorize(Roles = "Manager, User")]
+        public async Task<IActionResult> IncreaseDisagree(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var feedbackForm = await _context.FeedbackForm.SingleOrDefaultAsync(m => m.Id == id);
+            if (feedbackForm == null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    int total = feedbackForm.Disagree + 1;
+                    feedbackForm.Disagree = total;
+              
+                    _context.Update(feedbackForm);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!FeedbackFormExists(feedbackForm.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+            return RedirectToAction("Index");
         }
     }
 }
