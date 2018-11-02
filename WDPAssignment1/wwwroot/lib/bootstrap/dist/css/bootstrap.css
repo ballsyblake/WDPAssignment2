@@ -10,6 +10,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
+    padding-top:5%;
   margin: 0;
   width: 100%;
 }
@@ -94,10 +95,12 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  height: 0;
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
+    color: gold;
+    background-color: gold;
+    height: 5px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 pre {
   overflow: auto;
@@ -1145,10 +1148,12 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #eee;
+    color: gold;
+    background-color: gold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
 }
 .sr-only {
   position: absolute;
@@ -1583,8 +1588,7 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  
   margin-right: auto;
   margin-left: auto;
 }
@@ -1604,8 +1608,7 @@ pre code {
   }
 }
 .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+
   margin-right: auto;
   margin-left: auto;
 }

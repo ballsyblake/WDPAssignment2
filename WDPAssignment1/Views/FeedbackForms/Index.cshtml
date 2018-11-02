@@ -7,8 +7,18 @@
 <h2>Index</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
-</p>
+    @{ 
+        if(User.IsInRole("User") || User.IsInRole("Manager"))
+        {
+            <a class="btnlink btnlink1" asp-action="Create">Submit Your Feedback</a>
+        }
+        else
+        {
+            <p>Please <a href="/Account/Login">log in</a> or <a href="/Account/Register">create an account</a> to post your feedback on this page.</p>
+        }
+    }
+</p> 
+
 @foreach (var item in Model)
 {
     <h3>@Html.DisplayFor(modelItem => item.Heading)</h3>
@@ -27,27 +37,28 @@
                 }
         </li>
         <li>@Html.DisplayFor(modelItem => item.Feedback)</li>
-        <li>Feedback by @Html.DisplayFor(modelItem => item.UserName) at @Html.DisplayFor(modelItem => item.Date)</li>
+        <li>Feedback by <b>@Html.DisplayFor(modelItem => item.UserName)</b> at <b>@Html.DisplayFor(modelItem => item.Date)</b> </li>
         <li>
-            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            <a class="btnlink" asp-action="Details" asp-route-id="@item.Id">Details</a>
             @{
                 if (User.IsInRole("User")||User.IsInRole("Manager"))
                 {
-                    <a asp-action="IncreaseAgree" asp-route-id="@item.Id">Like(@item.Agree.ToString())</a>
-                    <a asp-action="IncreaseDisagree" asp-route-id="@item.Id">Dislike(@item.Disagree.ToString())</a>
+                    <a class="btnlink btnlink3" asp-action="IncreaseAgree" asp-route-id="@item.Id">Agree(@item.Agree.ToString())</a>
+                    <a class="btnlink btnlink2" asp-action="IncreaseDisagree" asp-route-id="@item.Id">Disagree(@item.Disagree.ToString())</a>
                 }
             }
             @{
                 if (User.IsInRole("Manager"))
                 {
                     
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btnlink" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                     
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a class="btnlink" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 }
 
             }
 
         </li>
     </ul>
+    <hr />
 }
